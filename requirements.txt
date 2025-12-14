@@ -1,0 +1,15 @@
+# Core requirements for thermal person detection pipeline
+ultralytics>=8.0.0  # For YOLOv8n training and inference
+opencv-python       # For image and video processing
+matplotlib          # For visualizations
+numpy               # For array operations
+pyyaml              # For YAML config handling
+
+# RT-DETR dependencies (if using official repo, may require extra install steps)
+torch               # For PyTorch-based models
+
+# (Optional, for data handling and audits)
+pandas              # For CSV and data manipulation
+
+# (Optional, for Jupyter notebooks)
+jupyter
