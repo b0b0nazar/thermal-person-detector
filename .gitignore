@@ -1,0 +1,32 @@
+# DATA
+data/
+
+# RESULTS & OUTPUTS
+results/
+result/
+runs/
+**/weights/
+
+# MODEL FILES
+*.pt
+*.pth
+*.onnx
+*.engine
+*.mp4
+*.avi
+
+# PYTHON
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# ENV
+.env
+.venv
+venv/
+conda/
+
+# OS / EDITOR
+.DS_Store
+.vscode/*
+!.vscode/settings.json
