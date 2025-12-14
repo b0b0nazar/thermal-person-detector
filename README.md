@@ -36,7 +36,7 @@ training/                               # Training and visualization scripts for
 - **Audit:** Class balance and split integrity checked with `dataset_preparation/check_yolo_split_balance.py`
 ## Dataset Split Visualization
 
-![FLIR Dataset Fair Split](docs/data-split-flir.png)
+![FLIR Dataset Fair Split](docs/data-split-flir-bg.png)
 
 ## Model Training
 - **YOLOv8n:**
