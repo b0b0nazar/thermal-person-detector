@@ -26,6 +26,13 @@ training/                               # Training and visualization scripts for
 - **How to use:** Download the dataset from Kaggle, extract, and place the relevant folders and annotation files into the project as described above.
 - **Splitting:** Stratified and fair splitting using `dataset_preparation/stratified_split_yolo.py`
 - **Annotation Conversion:** COCO to YOLO format using custom scripts in `dataset_preparation/prepare_yolo_dataset.py`
+- **Dataset YAML Generation:**  
+  Script: `dataset_preparation/write_dataset_yaml.py`  
+  Purpose: Generates a YOLO-compatible dataset YAML file (e.g., `data.yaml`) with correct paths and class names for training.  
+  Usage:  
+    python3 dataset_preparation/write_dataset_yaml.py  
+  This creates the YAML file in your processed data directory for use in training scripts.
+
 - **Audit:** Class balance and split integrity checked with `dataset_preparation/check_yolo_split_balance.py`
 
 ## Model Training
