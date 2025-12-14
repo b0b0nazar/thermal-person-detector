@@ -34,6 +34,9 @@ training/                               # Training and visualization scripts for
   This creates the YAML file in your processed data directory for use in training scripts.
 
 - **Audit:** Class balance and split integrity checked with `dataset_preparation/check_yolo_split_balance.py`
+## Dataset Split Visualization
+
+![FLIR Dataset Fair Split](docs/data-split-flir.png)
 
 ## Model Training
 - **YOLOv8n:**
