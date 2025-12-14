@@ -1,8 +1,7 @@
 # Thermal Person Detection with YOLOv8n and RT-DETR
 
 ## Overview
-This project focuses on detecting persons in thermal images using two state-of-the-art object detection models: YOLOv8n (Ultralytics) and RT-DETR (Baidu). The pipeline covers dataset preparation, model training, evaluation, and qualitative/quantitative analysis, with a strong emphasis on reproducibility and code clarity.
-
+This project focuses on detecting persons in thermal images using two state-of-the-art object detection models: YOLOv8n (Ultralytics) and RT-DETR (Baidu). The pipeline covers dataset preparation, model training, evaluation, and qualitative/quantitative analysis
 ## Project Structure
 ```
 data/
@@ -22,9 +21,11 @@ training/                               # Training and visualization scripts for
 ```
 
 ## Dataset Preparation
-- **Source:** FLIR ADAS thermal dataset (see `data/raw/flir_adas/`)
+- **Source:** FLIR ADAS thermal dataset, downloaded from [Kaggle FLIR Thermal Images Dataset](https://www.kaggle.com/datasets/deepnewbie/flir-thermal-images-dataset/data)
+- **What was used:** Only the 8-bit thermal images for `train`, `val`, and `video` splits, along with their COCO-format `.json` annotation files, were downloaded and placed in `data/raw/flir_adas/train/`, `data/raw/flir_adas/val/`, and `data/raw/flir_adas/video/` respectively. The video split was used for inference demos. No RGB or other modalities were used.
+- **How to use:** Download the dataset from Kaggle, extract, and place the relevant folders and annotation files into the project as described above.
 - **Splitting:** Stratified and fair splitting using `dataset_preparation/stratified_split_yolo.py`
-- **Annotation Conversion:** COCO to YOLO format using custom scripts in `dataset_preparation/`
+- **Annotation Conversion:** COCO to YOLO format using custom scripts in `dataset_preparation/prepare_yolo_dataset.py`
 - **Audit:** Class balance and split integrity checked with `dataset_preparation/check_yolo_split_balance.py`
 
 ## Model Training
@@ -70,7 +71,7 @@ training/                               # Training and visualization scripts for
 ## References
 - [Ultralytics YOLOv8 Documentation](https://docs.ultralytics.com/)
 - [RT-DETR GitHub](https://github.com/ModelTC/RT-DETR)
-- FLIR ADAS Dataset
-
+- [Kaggle FLIR Thermal Images Dataset](https://www.kaggle.com/datasets/deepnewbie/flir-thermal-images-dataset/data)
+- [Kaggle FLIR Thermal Images Dataset](https://www.kaggle.com/datasets/deepnewbie/flir-thermal-images-dataset/data)
 ## Contact
 For questions or collaboration, please open an issue or contact the project maintainer.
